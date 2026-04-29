@@ -11,6 +11,12 @@ export interface Mate {
   description: string
 }
 
+export interface RecommendedHotel {
+  name: string
+  rating: string
+  note: string
+}
+
 export interface TravelResult {
   mbti: string
   types: string
@@ -427,4 +433,57 @@ export const results: Record<string, TravelResult> = {
     badgeBg: 'bg-gray-100',
     badgeText: 'text-gray-800',
   },
+}
+
+const defaultHotels: RecommendedHotel[] = [
+  { name: '호텔 A (고객사 지정 예정)', rating: '4★', note: '도심 접근성 우수' },
+  { name: '호텔 B (고객사 지정 예정)', rating: '4★', note: '가성비 비즈니스' },
+  { name: '호텔 C (고객사 지정 예정)', rating: '3★', note: '합리적 가격대' },
+]
+
+const hotelsByGroup: Record<string, RecommendedHotel[]> = {
+  planner: [
+    { name: '플래너 호텔 A (고객사 지정 예정)', rating: '4★', note: '교통 중심 입지' },
+    { name: '플래너 호텔 B (고객사 지정 예정)', rating: '4★', note: '비즈니스 친화 시설' },
+    { name: '플래너 호텔 C (고객사 지정 예정)', rating: '3★', note: '체크인/아웃 동선 편리' },
+  ],
+  healing: [
+    { name: '힐링 리조트 A (고객사 지정 예정)', rating: '5★', note: '스파/웰니스 특화' },
+    { name: '힐링 호텔 B (고객사 지정 예정)', rating: '4★', note: '조용한 휴식형 객실' },
+    { name: '힐링 스테이 C (고객사 지정 예정)', rating: '4★', note: '자연 친화 로케이션' },
+  ],
+  city: [
+    { name: '시티 호텔 A (고객사 지정 예정)', rating: '4★', note: '핵심 관광지 인접' },
+    { name: '시티 호텔 B (고객사 지정 예정)', rating: '4★', note: '야간 이동 편리' },
+    { name: '시티 호텔 C (고객사 지정 예정)', rating: '3★', note: '합리적 예산 구성' },
+  ],
+  premium: [
+    { name: '프리미엄 호텔 A (고객사 지정 예정)', rating: '5★', note: '컨시어지 특화' },
+    { name: '프리미엄 호텔 B (고객사 지정 예정)', rating: '5★', note: '라운지/뷰 우수' },
+    { name: '프리미엄 호텔 C (고객사 지정 예정)', rating: '4★', note: '비즈니스+휴양 균형' },
+  ],
+}
+
+const mbtiHotelGroup: Record<string, keyof typeof hotelsByGroup> = {
+  ISTJ: 'planner',
+  ESTJ: 'planner',
+  INTJ: 'planner',
+  ISFJ: 'healing',
+  INFJ: 'healing',
+  INFP: 'healing',
+  ISFP: 'healing',
+  ESFP: 'city',
+  ENFP: 'city',
+  ESTP: 'city',
+  ENTP: 'city',
+  ENTJ: 'premium',
+  ENFJ: 'premium',
+  INTP: 'premium',
+  ISTP: 'planner',
+  ESFJ: 'city',
+}
+
+export function getRecommendedHotels(mbti: string): RecommendedHotel[] {
+  const groupKey = mbtiHotelGroup[mbti]
+  return groupKey ? hotelsByGroup[groupKey] : defaultHotels
 }

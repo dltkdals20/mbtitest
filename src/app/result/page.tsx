@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Footer from '@/components/Footer'
-import { results } from '@/data/results'
+import { getRecommendedHotels, results } from '@/data/results'
 
 function ResultContent() {
   const router = useRouter()
@@ -20,6 +20,7 @@ function ResultContent() {
   }, [type, result, router])
 
   if (!result) return null
+  const recommendedHotels = getRecommendedHotels(result.mbti)
 
   const handleShare = async () => {
     const text = `나의 MBTI 여행 타입은 ${result.mbti} ${result.title}!\nMBTI 여행 처방전에서 당신의 여행 타입을 찾아보세요.`
@@ -120,6 +121,35 @@ function ResultContent() {
             </span>
             <h4 className="text-[18px] font-bold text-primary mb-2">추천 숙소 스타일</h4>
             <p className="text-[16px] leading-[1.6] text-on-surface-variant">{result.hotelStyle}</p>
+            <div className="mt-5 rounded-2xl bg-surface-container-low p-4">
+              <p className="text-[12px] font-bold tracking-[0.05em] text-primary mb-3">
+                추천 호텔 리스트 (고객사 교체용)
+              </p>
+              {recommendedHotels.length ? (
+                <div className="space-y-2">
+                  {recommendedHotels.map((hotel, idx) => (
+                    <div
+                      key={`${hotel.name}-${idx}`}
+                      className="flex items-center justify-between bg-white rounded-xl px-3 py-2 border border-slate-100"
+                    >
+                      <div className="pr-3">
+                        <p className="text-[14px] leading-[1.5] text-on-surface font-semibold">
+                          {idx + 1}. {hotel.name}
+                        </p>
+                        <p className="text-[12px] leading-[1.4] text-on-surface-variant mt-0.5">
+                          {hotel.note}
+                        </p>
+                      </div>
+                      <span className="text-xs text-slate-400 shrink-0">{hotel.rating}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="bg-white rounded-xl px-3 py-2 border border-slate-100 text-[14px] text-on-surface-variant">
+                  추천 호텔 준비 중입니다.
+                </div>
+              )}
+            </div>
           </div>
           <div className="bg-primary-container/20 rounded-[24px] p-5 border border-primary-container/30">
             <span className="material-symbols-outlined text-primary mb-2 block">calendar_month</span>
