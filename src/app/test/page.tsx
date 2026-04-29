@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import Header from '@/components/Header'
 import { questions, MbtiLetter } from '@/data/questions'
 import { calculateMbti } from '@/lib/mbti'
 
@@ -54,12 +53,6 @@ export default function TestPage() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-background text-on-surface">
       <div className="w-full max-w-[480px] mx-auto flex flex-col min-h-screen">
-        <Header
-          variant="test"
-          onBack={handleBack}
-          onClose={handleClose}
-          stepLabel="STEP: DISCOVER"
-        />
 
         <main className="flex-grow px-6 py-8 flex flex-col">
           {/* Progress */}

@@ -1,12 +1,10 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-background text-on-background">
       <div className="w-full max-w-[480px] mx-auto flex flex-col min-h-screen">
-        <Header />
 
         <main className="flex-grow flex flex-col gap-8">
           {/* Hero Section */}

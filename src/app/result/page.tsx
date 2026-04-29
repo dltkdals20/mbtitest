@@ -2,7 +2,6 @@
 
 import { Suspense, useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { results } from '@/data/results'
 
@@ -198,7 +197,6 @@ export default function ResultPage() {
   return (
     <div className="min-h-screen flex flex-col items-center bg-background text-on-background">
       <div className="w-full max-w-[480px] mx-auto flex flex-col min-h-screen">
-        <Header />
         <Suspense
           fallback={
             <div className="flex-grow flex items-center justify-center">
