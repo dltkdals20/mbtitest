@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#5a5111",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#504707",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#bceddc",
+                    "secondary-fixed-dim": "#a1d0c1",
+                    "surface-tint": "#42617d",
+                    "on-primary-fixed": "#001d32",
+                    "on-primary-fixed-variant": "#294964",
+                    "secondary-fixed": "#bceddc",
+                    "on-secondary-container": "#406d60",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary-fixed": "#201c00",
+                    "primary-fixed-dim": "#aacaea",
+                    "inverse-on-surface": "#f0f1f2",
+                    "inverse-primary": "#aacaea",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9fa",
+                    "primary-container": "#a7c7e7",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e7e8e9",
+                    "primary-fixed": "#cde5ff",
+                    "on-surface": "#191c1d",
+                    "primary": "#42617d",
+                    "outline-variant": "#c2c7ce",
+                    "tertiary": "#685f1f",
+                    "tertiary-container": "#d2c579",
+                    "on-secondary-fixed-variant": "#214e43",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "on-primary": "#ffffff",
+                    "outline": "#73777e",
+                    "tertiary-fixed": "#f1e495",
+                    "on-primary-container": "#34536f",
+                    "tertiary-fixed-dim": "#d4c87c",
+                    "on-background": "#191c1d",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#42474d",
+                    "surface": "#f8f9fa",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#002019",
+                    "inverse-surface": "#2e3132",
+                    "secondary": "#3a675a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "20px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "unit": "4px",
+                    "stack-sm": "8px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-bold": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-xl": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "label-bold": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-lg": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8F9FA; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="bg-[#F8F9FA]/80 backdrop-blur-md dock full-width top-0 z-50 sticky border-b border-slate-100 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] w-full max-w-[480px] mx-auto">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<span class="material-symbols-outlined text-[#A7C7E7]" data-icon="travel_explore">travel_explore</span>
+<h1 class="text-lg font-extrabold text-slate-900 font-headline-xl tracking-tight">MBTI 여행 처방전</h1>
+<span class="material-symbols-outlined text-[#A7C7E7]" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="w-full max-w-[480px] flex-grow flex flex-col gap-8">
+<!-- Hero Section -->
+<section class="relative px-6 pt-12 pb-6 overflow-hidden">
+<div class="absolute top-0 right-0 -mr-12 -mt-12 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-12 -mb-12 w-48 h-48 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="mb-6 inline-flex items-center gap-2 bg-secondary-container/30 text-on-secondary-container px-4 py-1.5 rounded-full font-label-bold text-label-bold">
+<span class="material-symbols-outlined text-[16px]" data-icon="flight_takeoff">flight_takeoff</span>
+                    NEW TRAVEL CURE
+                </div>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-4">MBTI 여행 처방전</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[300px]">
+                    나의 MBTI 성향으로 알아보는<br/>찰떡 여행지와 여행 스타일
+                </p>
+</div>
+</section>
+<!-- Visual Content / Illustration Area -->
+<section class="px-6">
+<div class="relative grid grid-cols-2 gap-4">
+<div class="aspect-square rounded-[32px] overflow-hidden shadow-lg transform -rotate-3 border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="A cheerful flat-design illustration of a bright blue airplane flying through fluffy white clouds in a clear pastel blue sky. The visual style is modern, minimalist, and airy, using soft gradients and a clean aesthetic that perfectly aligns with a wellness and travel-themed digital interface for young adults." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGgxi7hWFtHfimNYaUWp4YMOXvNr8n17NclgiuWPDhjoQfP1D4l--ymFUTEKeh8Cx9ZUa-pGSjgUoXtUxdDpCpUNK1ZAwYOSDAk9a31D324GwYV331Q7yyT3RqmbBDF7OctK4HJpYwcimoejiVDnG9YKHjCmmxgnefWuypZk_KewNMfRhurV8OP01GWFCakw6epWLtptiaTT88iQv2byBCYgmBVuXPzwk50meKSHyNxPyjouGYZUY5NiidmfEFUnJabcjiYu1vArxs"/>
+</div>
+<div class="aspect-square rounded-[32px] overflow-hidden shadow-lg transform rotate-6 translate-y-4 border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="A modern aesthetic photograph of a stylish pastel yellow travel carrier and a vintage-style map laid out on a clean white surface. Soft, high-key lighting creates a gentle atmosphere, emphasizing a sense of organized preparation and excitement for a personalized journey. The color palette features light blues, mint greens, and soft yellows to evoke a high-end wellness retreat feeling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgQQ0tBTS3FUrvTYVEbCy720T4JV5FXznFV8P1js0B7RQNPFlV9JGnC3qTlSe4ixMnkacUzbWezya7unevdnjFI69wooOHIYqExwykyoyyX9BcV133d3siy53U6zuPSn5ESfTH4R5eUKC3KQ6yl3-R4q8L_XzOYVmQpdso13pHzVdX3DK2F9T2s09WZAf-ns_KbKEZFwTGsugUew3hELfwwEigwpFOtIO8CWgONOSX7DMl1NXn_qsLSTRblpLxGj635ZSe6Y9ZZj5Y"/>
+</div>
+<!-- Floating Icons -->
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white p-3 rounded-2xl shadow-xl z-20">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+</div>
+</div>
+</section>
+<!-- Description Card -->
+<section class="px-6 mt-8">
+<div class="glass-card rounded-[32px] p-8 text-center shadow-[0px_10px_30px_rgba(0,0,0,0.04)]">
+<div class="flex justify-center gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<div class="w-2 h-2 rounded-full bg-tertiary-container"></div>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    3분이면 충분해요.<br/>
+                    나에게 맞는 <strong>여행지, 호텔, 여행 시기,</strong><br/>
+<strong>여행 궁합</strong>까지 완벽하게 추천해드려요.
+                </p>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 mt-4 pb-12">
+<button class="w-full h-[64px] bg-primary text-on-primary rounded-full font-headline-lg text-headline-lg shadow-[0px_15px_35px_rgba(66,97,125,0.2)] active:scale-95 transition-transform flex items-center justify-center gap-3">
+                여행 성향 테스트 시작하기
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F8F9FA] full-width border-t border-slate-100 w-full max-w-[480px] mx-auto px-6 py-12 flex flex-col items-center gap-4 text-center">
+<span class="text-slate-300 font-bold font-['Plus_Jakarta_Sans']">MBTI TRVL</span>
+<p class="text-xs font-medium font-['Plus_Jakarta_Sans'] text-slate-400">© 2024 MBTI Travel Prescription. Designed for your wellness.</p>
+</footer>
+<!-- BottomNavBar -->
+</body></html>
+
+
+

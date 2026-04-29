@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MBTI 여행 처방전 - 가성비 탐험가</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#5a5111",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-dim": "#d9dadb",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#504707",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#bceddc",
+                        "secondary-fixed-dim": "#a1d0c1",
+                        "surface-tint": "#42617d",
+                        "on-primary-fixed": "#001d32",
+                        "on-primary-fixed-variant": "#294964",
+                        "secondary-fixed": "#bceddc",
+                        "on-secondary-container": "#406d60",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-fixed": "#201c00",
+                        "primary-fixed-dim": "#aacaea",
+                        "inverse-on-surface": "#f0f1f2",
+                        "inverse-primary": "#aacaea",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9fa",
+                        "primary-container": "#a7c7e7",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e8e9",
+                        "primary-fixed": "#cde5ff",
+                        "on-surface": "#191c1d",
+                        "primary": "#42617d",
+                        "outline-variant": "#c2c7ce",
+                        "tertiary": "#685f1f",
+                        "tertiary-container": "#d2c579",
+                        "on-secondary-fixed-variant": "#214e43",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "on-primary": "#ffffff",
+                        "outline": "#73777e",
+                        "tertiary-fixed": "#f1e495",
+                        "on-primary-container": "#34536f",
+                        "tertiary-fixed-dim": "#d4c87c",
+                        "on-background": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#42474d",
+                        "surface": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#002019",
+                        "inverse-surface": "#2e3132",
+                        "secondary": "#3a675a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding": "20px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["32px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "label-bold": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #F8F9FA; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-on-background">
+<!-- Top Navigation -->
+<header class="bg-[#F8F9FA]/80 backdrop-blur-md dark:bg-slate-900/80 border-b border-slate-100 dark:border-slate-800 shadow-[0px_4px_20px_rgba(0,0,0,0.02)] docked full-width top-0 z-50 sticky">
+<div class="flex items-center justify-between px-6 py-4 max-w-[480px] mx-auto w-full">
+<span class="material-symbols-outlined text-[#A7C7E7]" data-icon="travel_explore">travel_explore</span>
+<h1 class="text-lg font-extrabold text-slate-900 dark:text-white font-['Plus_Jakarta_Sans'] tracking-tight">MBTI 여행 처방전</h1>
+<span class="material-symbols-outlined text-slate-400" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="max-w-[480px] mx-auto px-5 pt-8 space-y-8 pb-12">
+<!-- Hero Section -->
+<section class="text-center space-y-4">
+<div class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-bold text-label-bold">
+                ESTJ / ISTJ
+            </div>
+<h2 class="font-headline-xl text-headline-xl text-primary leading-tight">당신은 가성비 탐험가 타입이에요</h2>
+<p class="font-body-md text-body-md text-on-surface-variant px-4">
+                치밀한 계획과 합리적인 소비로 여행의 가치를 극대화하는 스마트한 여행자입니다.
+            </p>
+<div class="relative mt-6 rounded-[32px] overflow-hidden shadow-xl aspect-[4/3]">
+<img alt="Budget Traveler Planning" class="w-full h-full object-cover" data-alt="A stylish woman sitting in a bright, modern airport lounge, focused on her digital tablet while surrounded by pastel-colored luggage. The lighting is soft and airy, creating a professional and optimistic atmosphere. The scene features a clean aesthetic with mint and soft blue color accents, emphasizing a sense of organized and peaceful travel planning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2un26wkECznifBBpKF-j9aI2xmpkHPpmocX7JkGMtT3H1nI9ontDky_temz052w5jzk0ggEX7W4XUgrfeGbpmGzCvk9H4-S-P4rY9GQfRM-9XLRN47tDPC-y5pa-lo7uKaJXLsa5O1KO_pPKlYS5rVDP0G0dBQaG7UVQk2F3a_0Uy685Ef7dT--_Iqg7uAaF9tmqVXwL5yvBcGyGNXnUnF_Fgpy4TpueWKBdL4E_psK9E7613U7e8rYgwqIJCCeJPPDV7zI6XvYqV"/>
+</div>
+</section>
+<!-- Travel Type Description -->
+<div class="glass-card rounded-[24px] p-6 shadow-[0px_10px_30px_rgba(0,0,0,0.04)] border border-white/50">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                여행 성향 분석
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                당신은 무작정 떠나는 여행보다 철저한 리서치를 통해 최상의 루트를 찾아내는 것에 희열을 느낍니다. 1원이라도 더 아끼는 것에 집중하기보다, 지출 대비 최고의 효율과 만족도를 뽑아내는 '가성비'의 달인입니다. 정해진 예산 안에서 호텔의 위치, 교통편, 로컬 맛집까지 완벽하게 조율된 여행을 선호합니다.
+            </p>
+</div>
+<!-- Recommended Destinations -->
+<section class="space-y-4">
+<h3 class="font-headline-lg text-headline-lg text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+                추천 여행지
+            </h3>
+<div class="grid grid-cols-1 gap-4">
+<!-- Da Nang -->
+<div class="flex bg-white rounded-2xl p-3 shadow-[0px_4px_12px_rgba(0,0,0,0.03)] border border-slate-50 overflow-hidden group">
+<img class="w-24 h-24 rounded-xl object-cover shrink-0" data-alt="The scenic Golden Bridge in Da Nang, Vietnam, held by giant stone hands emerging from the lush green hills. The sky is a clear pastel blue with soft sunlight illuminating the intricate architectural details. The overall image has a clean, high-quality travel photography feel with bright and vibrant tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4B2ZMyrdjeSuin3T7c3uaZUIuanvHTcg_RCOYBaWdBiMwEHbruWJjOQunpMY798suYu_N3Y7WFRoN7kytF8ZF3X-P4EHv-cJ3BB7-Wfj8NAL0gtyvhmzurLuAviimWoaAJe36AgKPjMzm4FI9evK0XOTFiksvbm46ZoBUVhSadcjVFpTk5fPcqF1Ze2SeX2Y4uQBqNKRdWDfX0SukoN3c4Ww2SagPUqDy7UVB8lIYYl_vGujRrJY1ranho9L7U_ZlrDDKcUNgnqHb"/>
+<div class="ml-4 flex flex-col justify-center">
+<h4 class="font-headline-lg text-[18px] text-slate-800">다낭, 베트남</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">럭셔리 풀빌라도 합리적인 가격에 즐길 수 있는 최고의 휴양지</p>
+</div>
+</div>
+<!-- Taipei -->
+<div class="flex bg-white rounded-2xl p-3 shadow-[0px_4px_12px_rgba(0,0,0,0.03)] border border-slate-50 overflow-hidden">
+<img class="w-24 h-24 rounded-xl object-cover shrink-0" data-alt="A bustling Taipei night market with colorful neon signs and glowing lanterns under a twilight sky. The scene is lively and vibrant, capturing the essence of street food culture in Taiwan. The image uses a modern color grade with clean whites and soft pastel highlights to maintain a premium feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUh1rVaguLWMCdYBMtbiiEJ9C8J_vFrhdH7esYVEjanwhnW-dmFSyvvUBRDCj9XCmyOP0UVbrbJ38BRKc9ENp6CEpU7C5cTuyH0v1yc27y-B6CKMdqdLJA_HXTViA_rrdWF6tO88eobFaEwFC1xSsTu6PAXo9FyBZV86wXYCVJCz3fQPte-W9x42LrTSNiKwuR6Y_njPFTpLX2xsCShsWy_ic31o3WnCx1S21b_2G2-yjF4XTwZMxbFjYDuhF9eFntHs5QGH-AEXTJ"/>
+<div class="ml-4 flex flex-col justify-center">
+<h4 class="font-headline-lg text-[18px] text-slate-800">타이베이, 대만</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">저렴하고 깨끗한 대중교통과 밤낮으로 즐거운 먹거리 천국</p>
+</div>
+</div>
+<!-- Bangkok -->
+<div class="flex bg-white rounded-2xl p-3 shadow-[0px_4px_12px_rgba(0,0,0,0.03)] border border-slate-50 overflow-hidden">
+<img class="w-24 h-24 rounded-xl object-cover shrink-0" data-alt="A majestic golden temple in Bangkok reflecting on the water at sunset. The sky is filled with warm, soft pink and purple hues, creating a serene and mystical atmosphere. The composition is clean and focused, reflecting high-end editorial travel imagery with pastel mint and blue undertones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgIuDR6L0v-dCc1xErT_2UPh8jRNffJGkSODK1pDPDlqoozpwPcyw8UfdFYvpruhSloLyTefUpClENluOJcna68RzX7MStdV4PC-s-vr0IkLCBxSiY-pnNeJXBMMnD7TV2-dJXe03IiClBeO0CpBDGAciKBOgZMpYL9FNDtBiCmJUAy_CI2GVWJ-AR_zIxvBAaKehgmRZsW0ff6F0ECnVKCTbMd8rhhQCvJyhV24a1PISyrq56RZLiueL3oIuhazyejgLPm_3ReeHc"/>
+<div class="ml-4 flex flex-col justify-center">
+<h4 class="font-headline-lg text-[18px] text-slate-800">방콕, 태국</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">화려한 도심 야경과 저렴한 물가의 환상적인 밸런스</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid for Details -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Hotel Style -->
+<div class="col-span-2 bg-white rounded-[24px] p-6 shadow-[0px_10px_30px_rgba(0,0,0,0.04)] border border-slate-50">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-3" data-icon="hotel">hotel</span>
+<h4 class="font-headline-lg text-[18px] text-primary mb-2">추천 숙소 스타일</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    "위치 좋고 가성비 좋은 3~4성급 호텔"<br/>
+                    역세권이나 시내 중심가에 위치해 이동 시간을 줄여주는 현대적인 비즈니스 호텔을 선호합니다.
+                </p>
+</div>
+<!-- Best Time -->
+<div class="bg-primary-container/20 rounded-[24px] p-6 border border-primary-container/30">
+<span class="material-symbols-outlined text-primary mb-3" data-icon="calendar_month">calendar_month</span>
+<h4 class="font-headline-lg text-[16px] text-primary mb-1">최적의 시기</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+                    비수기, 항공권 특가 시즌에 맞춘 스마트한 출발
+                </p>
+</div>
+<!-- Cautions -->
+<div class="bg-tertiary-container/20 rounded-[24px] p-6 border border-tertiary-container/30">
+<span class="material-symbols-outlined text-tertiary mb-3" data-icon="report_problem">report_problem</span>
+<h4 class="font-headline-lg text-[16px] text-tertiary mb-1">주의할 점</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">
+                    과도한 가성비 집착으로 여행의 재미를 놓치지 마세요.
+                </p>
+</div>
+</div>
+<!-- Best Mates -->
+<section class="space-y-4">
+<h3 class="font-headline-lg text-headline-lg text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+                최고의 여행 메이트
+            </h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">ENFP</div>
+<p class="font-body-sm text-body-sm flex-1">계획적인 당신의 일정에 에너지를 더해줄 분위기 메이커</p>
+</div>
+<div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">ESFP</div>
+<p class="font-body-sm text-body-sm flex-1">가성비 맛집에서도 즐겁게 리액션 해주는 긍정왕</p>
+</div>
+<div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container">ISTJ</div>
+<p class="font-body-sm text-body-sm flex-1">꼼꼼한 회계와 루트 확인을 함께할 든든한 파트너</p>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="space-y-4 pt-4">
+<button class="w-full h-14 rounded-2xl bg-primary text-white font-headline-lg text-[18px] flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-transform"><span>WON트래블 이동하기</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span></button>
+<div class="grid grid-cols-2 gap-4">
+<button class="h-14 rounded-2xl bg-white border border-slate-200 text-on-surface-variant font-label-bold flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="refresh">refresh</span>
+                    다시 테스트하기
+                </button>
+<button class="h-14 rounded-2xl bg-white border border-slate-200 text-on-surface-variant font-label-bold flex items-center justify-center gap-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+                    결과 공유하기
+                </button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<!-- Footer -->
+<footer class="max-w-[480px] mx-auto w-full px-6 py-12 flex flex-col items-center gap-4 text-center bg-[#F8F9FA] border-t border-slate-100 pb-12">
+<span class="text-slate-300 font-bold">MBTI Travel Prescription</span>
+<p class="text-xs font-medium font-['Plus_Jakarta_Sans'] text-slate-400">© 2024 MBTI Travel Prescription. Designed for your wellness.</p>
+<div class="flex gap-4">
+<a class="text-xs font-medium text-slate-400 hover:text-[#A7C7E7]" href="#">이용약관</a>
+<a class="text-xs font-medium text-slate-400 hover:text-[#A7C7E7]" href="#">개인정보처리방침</a>
+<a class="text-xs font-medium text-slate-400 hover:text-[#A7C7E7]" href="#">고객센터</a>
+</div>
+</footer>
+</body></html>
