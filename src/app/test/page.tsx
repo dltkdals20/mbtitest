@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { questions, MbtiLetter } from '@/data/questions'
 import { calculateMbti } from '@/lib/mbti'
@@ -50,11 +50,21 @@ export default function TestPage() {
 
   const handleClose = () => router.push('/')
 
-  return (
-    <div className="min-h-screen flex flex-col items-center bg-background text-on-surface">
-      <div className="w-full max-w-[480px] mx-auto flex flex-col min-h-screen">
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
 
-        <main className="flex-grow px-6 py-8 flex flex-col">
+    return () => {
+      document.body.style.overflow = prevOverflow
+    }
+  }, [])
+
+  return (
+    <div className="h-[100dvh] overflow-hidden flex flex-col items-center bg-background text-on-surface">
+      <div className="w-full max-w-[480px] mx-auto flex flex-col h-full">
+
+        <main className="flex-grow px-6 py-8 flex flex-col overflow-y-auto">
           {/* Progress */}
           <section className="mb-10" aria-label="진행 상황">
             <div className="flex justify-between items-end mb-3">
